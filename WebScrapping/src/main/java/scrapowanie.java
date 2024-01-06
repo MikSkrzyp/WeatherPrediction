@@ -61,6 +61,39 @@ public class scrapowanie {
 
     }
 
+    public static  void ScrapowanieHumidity(){
+        driver.navigate().to("https://www.wunderground.com/history/monthly/us/mi/detroit/KDET/date/2023-2");
+        List<WebElement> temperatureElements = driver.findElements(By.xpath("//*[@id=\"inner-content\"]/div[2]/div[1]/div[5]/div[1]/div/lib-city-history-observation/div/div[2]/table/tbody/tr/td[4]/table/tr/td[2]"));
+
+        String csv_file_path = "src/main/humidity.csv";
+
+        BufferedWriter writer = null;
+
+        try {
+            writer = new BufferedWriter(new FileWriter(csv_file_path,true));
+
+            // Write the temperatures to the CSV file
+            int i = 1;
+            while (i < temperatureElements.size()) {
+                String temperature = temperatureElements.get(i).getText();
+                writer.write(temperature);
+                writer.newLine();
+                i++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
 
 
 
