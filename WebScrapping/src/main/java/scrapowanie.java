@@ -29,7 +29,7 @@ public class scrapowanie {
 
 
     public static void ScrapowanieTemperatury(){
-        driver.navigate().to("https://www.wunderground.com/history/monthly/us/mi/detroit/KDET");
+        driver.navigate().to("https://www.wunderground.com/history/monthly/us/mi/detroit/KDET/date/2023-2");
         List<WebElement> temperatureElements = driver.findElements(By.xpath("//*[@id='inner-content']/div[2]/div[1]/div[5]/div[1]/div/lib-city-history-observation/div/div[2]/table/tbody/tr/td[2]/table/tr/td[2]"));
 
         String csv_file_path = "src/main/temperatures.csv";
@@ -37,7 +37,7 @@ public class scrapowanie {
         BufferedWriter writer = null;
 
         try {
-            writer = new BufferedWriter(new FileWriter(csv_file_path));
+            writer = new BufferedWriter(new FileWriter(csv_file_path,true));
 
             // Write the temperatures to the CSV file
             int i = 1;
