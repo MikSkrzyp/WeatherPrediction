@@ -3,7 +3,8 @@ public class main {
         scrapowanie.beforeTest();
 //        scrapowanie.ScrapowanieTemperatury();
 //          scrapowanie.ScrapowanieHumidity();
-        scrapowanie.ScrapowanieWindSpeed();
+//        scrapowanie.ScrapowanieWindSpeed();
+        scrapowanie.ScrapowaniePressure();
         scrapowanie.afterTest();
     }
 }
