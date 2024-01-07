@@ -39,7 +39,7 @@ public class scrapowanie {
         try {
             writer = new BufferedWriter(new FileWriter(csv_file_path,true));
 
-            // Write the temperatures to the CSV file
+
             int i = 1;
             while (i < temperatureElements.size()) {
                 String temperature = temperatureElements.get(i).getText();
@@ -72,7 +72,7 @@ public class scrapowanie {
         try {
             writer = new BufferedWriter(new FileWriter(csv_file_path,true));
 
-            // Write the temperatures to the CSV file
+
             int i = 1;
             while (i < temperatureElements.size()) {
                 String temperature = temperatureElements.get(i).getText();
@@ -105,7 +105,7 @@ public class scrapowanie {
         try {
             writer = new BufferedWriter(new FileWriter(csv_file_path,true));
 
-            // Write the temperatures to the CSV file
+
             int i = 1;
             while (i < temperatureElements.size()) {
                 String temperature = temperatureElements.get(i).getText();
@@ -137,7 +137,7 @@ public class scrapowanie {
         try {
             writer = new BufferedWriter(new FileWriter(csv_file_path,true));
 
-            // Write the temperatures to the CSV file
+
             int i = 1;
             while (i < temperatureElements.size()) {
                 String temperature = temperatureElements.get(i).getText();
