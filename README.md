@@ -10,6 +10,4 @@ Tech stack:
 
 Java (Selenium),
 
-Python(--Tutaj beda biblioteki--),
-
-Excel
+Python(matplotlib, sklearn, numpy,pandas)
